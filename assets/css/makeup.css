@@ -72,22 +72,19 @@ header{
 	padding: 5px;
 	margin: 0;
 	background: tomato;
-	margin-top: 40px;
+	margin-top: 20px;
 	
 	
 }
 h2{
-	padding-top:14px; 
+	padding-top:10px; 
 }
 
 .q {
 	padding-top:10px; 
 }
-.quiz >h1{
-	padding-top: 20px;
-}
 .options{
-	margin-top: 50px;
+
 	padding: 10px 0;
 	
 	font-size: 1.4rem;
@@ -218,7 +215,8 @@ font-size: 1.2rem;
 } @media only  screen and (max-width:575px ){
 
 	.quiz{
-	background: inherit;
+	
+	background: #ff9f43;
 		border-radius: 0;
 		width: 65%;
 	}
@@ -234,4 +232,13 @@ font-size: 1.2rem;
 		border-radius: 0;background: inherit;
 		width: 100%;
 	}
+	.question{
+		margin-top: 16px;
+	}
+	.footer{
+		margin-top: 7px;
+	}
+	.options{
+		margin-top: 20px;
+	} 
 } 
