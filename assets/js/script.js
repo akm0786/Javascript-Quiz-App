@@ -5,6 +5,7 @@ const Option3=document.getElementById('choice3');
 const Option4=document.getElementById('choice4');
 const submit=document.getElementById('submit');
 const score_div=document.querySelector('.score p');
+const score_div_main=document.querySelector('.score');
 const container=document.querySelector('.container');
 const quiz_div=document.querySelector('.quiz');
 const quiz_h2=document.querySelector('.quiz h2');
@@ -146,7 +147,7 @@ const check =()=>{
  					question_div.classList.add('hide');
  				option_div.classList.add('hide');
  				button__div.classList.add('hide');
-
+ 					score_div_main.classList.remove('hide');
  					quiz_h2.style.paddingTop="60px";
  					quiz_h2.innerHTML="Result:";
  			score_div.innerText="You scored "+score +" out of "+MyQuestions.length+".";
@@ -172,7 +173,8 @@ const check =()=>{
  					question_div.classList.add('hide');
  				option_div.classList.add('hide');
  				button__div.classList.add('hide');
-
+ 				
+ 					score_div_main.classList.remove('hide');
  					quiz_h2.style.paddingTop="60px";
  					quiz_h2.innerHTML="Result:";
  				score_div.innerText="You scored "+score +" out of "+MyQuestions.length+".";
@@ -191,8 +193,7 @@ const check =()=>{
  }
 //==============================================================================
  	quiz_div.classList.add('hide');
- 	footer_div.classList.add('hide');
- 			
+ 	footer_div.classList.add('hide');	
 
 //creating a div for button
  	let button_div=document.createElement('div');
@@ -216,6 +217,8 @@ const check =()=>{
 
 	button_div.classList.add('hide');
 	container.classList.remove('b_div');
+
+ 	score_div_main.classList.add('hide');	
 	quiz_div.classList.remove('hide');
 	footer_div.classList.remove('hide');
   	start();
@@ -223,22 +226,3 @@ const check =()=>{
 	submit.addEventListener('click',check);
 }
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
