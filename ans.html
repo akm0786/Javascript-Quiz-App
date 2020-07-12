@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Answer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Roboto&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+	user-select: none;
+}
+body{
+background:  #ff9f43;
+
+}
+header{
+			width: 100%;
+			
+			background: green;
+		}
+		header >h1{
+			line-height: 10vh;
+		}
+		h1{
+			text-align: center;
+			line-height: 7vh;
+			font-size: 2.1rem;
+			color: #FFFFFF;
+			letter-spacing: 7px;
+			text-transform: uppercase;
+			text-shadow: #474747 3px 5px 2px;
+		}
+		.footer{
+			width: 100%;
+			height: 8vh;
+			text-align:center;
+			display: flex;
+			font-size: 18px;
+			align-items: center;
+			justify-content: center;
+			
+			background-color: #34495e;
+
+		}
+		.footer >p,a{
+			color: white;
+
+		}
+		.answer_div{
+			overflow-y: auto;
+		}
+		.answer{
+
+			justify-content: center;
+			text-align: center;
+
+		}
+		.answer>p{
+			color: green;
+			font-size: 1.9rem;
+
+
+		}
+
+@media only screen and (max-width: 400px)
+
+{
+	header > h1{
+		letter-spacing: 2px;
+	}
+} 
+		
+	</style>	
+</head>
+<body>
+
+	<div  class="main">
+		
+
+	<header style="height:10vh;">
+	<h1> Javascript Quiz </h1>
+		
+	</header>
+	
+			
+		<div class="answer_div" style="height:82vh;">
+			<div class="answer">
+			
+			 </div>
+		</div>
+
+		<div class="foot" >
+			<footer class="footer">
+			<p>Dev by <b><a href="https://github.com/akm0786/" target="_blank">Abhishek Mishra</a></b></p>
+		</footer>
+	
+		</div>
+	</div>
+</body>
+
+<script>
+	
+	const QAdiv=document.querySelector('.answer');
+
+
+	// console.log(answer);
+	const MyQuestions=[
+	
+	{
+		'question':'Who invented javascript?',
+
+		'answers':
+
+		{ 
+			'a':'Abhishek Mishra',
+			'b':'Brendan Eich',
+			'c':'Sharad Raj',
+			'd':'Donald Trump'
+		},
+
+		'CorrectAnswer':'Brendan Eich'
+	},
+
+	{
+
+		'question':'Html Stands for ?',
+		'answers':
+		{ 
+			'a':'Hyper test markup language',
+			'b':'Hyper text markus languagee',
+			'c':'Hyper text markup language',
+			'd':'None of the above'
+		},
+
+		'CorrectAnswer':'Hyper text markup language'
+
+	},
+
+	
+	 {
+	    'question': "Which tool can you use to ensure code quality?",
+	    'answers': 
+		    {
+		      'a': 'Angular',
+		      'b': 'jQuery',
+		      'c': 'RequireJS',
+		      'd': 'ESLint'
+		    },
+
+	    'CorrectAnswer': 'ESLint'
+  },
+  {
+  	'question':" Number('1') - 1 == 0;  What is the result?",
+  	'answers':
+  			  {
+  				'a':'true',
+  				'b':'false',
+  				'c':'TypeError',
+  				'd':'none of the above'
+  			  },
+  			  'CorrectAnswer':'true'
+  },
+  {
+  	'question':" (true + false) > 2 + true;  What is the result?",
+  	'answers':
+  			  {
+  				'a':'true',
+  				'b':'false',
+  				'c':'TypeError',
+  				'd':'none of the above'
+  			  },
+  			  'CorrectAnswer':'false'
+  },
+  {
+  	'question':" '1' - - '1';  What is the result?",
+  	'answers':
+  			  {
+  				'a':'0',
+  				'b':'11',
+  				'c':'"11"',
+  				'd':'2'
+  			  },
+  			  'CorrectAnswer':'2'
+  },
+  {
+  	'question':" '[] + [] + 'abc'.split('');  What is the result?",
+  	'answers':
+  			  {
+  				'a':'"a,b,c"',
+  				'b':'TypeError',
+  				'c':'["a","b","c"]',
+  				'd':'[][]["a","b","c"]'
+  			  },
+  			  'CorrectAnswer':'"a,b,c"'
+  },
+  {
+  	'question':" String('Hello') === 'Hello';  What is the result?",
+  	'answers':
+  			  {
+  				'a':'true',
+  				'b':'false',
+  				'c':'TypeError',
+  				'd':'none of the above'
+  			  },
+  			  'CorrectAnswer':'true'
+  },
+  {
+  	'question':'How to write "Hello World" in an alert box?',
+  	'answers':
+  			  {
+  				'a':'msg("Hello World")',
+  				'b':'display("Hello World")',
+  				'c':'alert("Hello World")',
+  				'd':'none of the above'
+  			  },
+  			  'CorrectAnswer':'alert("Hello World")'
+  },
+  {
+  	'question':"How to create a function in javascript?",
+  	'answers':
+  			  {
+  				'a':'function:MyQuestions()',
+  				'b':'function MyQuestions()',
+  				'c':'function =MyQuestions()',
+  				'd':'none of the above'
+  			  },
+  			  'CorrectAnswer':'function MyQuestions()'
+  }
+
+  	 
+
+]
+	
+for(var i=0;i<MyQuestions.length;i++)
+{			
+	var br=document.createElement('br');
+	QAdiv.appendChild(br);
+
+	let q=document.createElement('h2');
+	let a=document.createElement('p');
+	q.textContent=MyQuestions[i]['question'];
+	a.textContent=MyQuestions[i]['CorrectAnswer'];
+	QAdiv.appendChild(q);
+	QAdiv.appendChild(a);
+
+
+}
+
+</script>
+</html>
