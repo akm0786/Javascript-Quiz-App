@@ -24,10 +24,10 @@ const MyQuestions=[
 		'answers':
 
 		{ 
-			'a':'Abhishek Mishra',
+			'a':'Dennis Ritchie',
 			'b':'Brendan Eich',
-			'c':'Sharad Raj',
-			'd':'Donald Trump'
+			'c':'James Gosling',
+			'd':'Bjarne Stroustrup'
 		},
 
 		'CorrectAnswer':'Brendan Eich'
