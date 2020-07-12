@@ -236,7 +236,7 @@ const check =()=>{
  			{
 
  				console.log("im clicked");
- 				window.open("https://akm0786.github.io/ans.html")
+ 				window.open("../../ans.html")
  			});
  			}
  			else
@@ -267,7 +267,7 @@ const check =()=>{
  			answersheet.addEventListener('click',function()
  			{	
  				console.log("im clicked");
- 				window.open("https://akm0786.github.io/ans.html")
+ 				window.open("../../ans.html")
 
  			});
  			}
