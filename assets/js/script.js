@@ -207,8 +207,6 @@ const check =()=>{
  			answersheet.setAttribute('value','Check Answers');
  		
  			aDiv.appendChild(answersheet);
- 				var aTag=document.createElement('a');
- 				aTag.setAttribute('href',"C:/xampp/htdocs/jsquiz/ans.html");
  			
  //=================================================================================		
  const checkAnswer=()=>{
@@ -238,7 +236,7 @@ const check =()=>{
  			{
 
  				console.log("im clicked");
- 				window.open("../../ans.html")
+ 				window.open("https://akm0786.github.io/ans.html")
  			});
  			}
  			else
@@ -269,7 +267,7 @@ const check =()=>{
  			answersheet.addEventListener('click',function()
  			{	
  				console.log("im clicked");
- 				window.open("../../ans.html")
+ 				window.open("https://akm0786.github.io/ans.html")
 
  			});
  			}
